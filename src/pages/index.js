@@ -41,17 +41,21 @@ import { setButtonText } from "../utils/helpers.js";
 const api = new Api({
   baseUrl: "https://around-api.en.tripleten-services.com/v1",
   headers: {
-    authorization: "ecd5a488-3949-4139-88e7-a6fa394203da",
+    authorization: "e36a3ca8-ffb4-4725-8aec-e4c3c33c1354",
     "Content-Type": "application/json",
   },
 });
 
 api
   .getAppInfo()
-  .then(([cards]) => {
+  .then(([cards, users]) => {
     cards.forEach((item) => {
       renderCard(item);
     });
+
+    profileName.textContent = users.name;
+    profileDescription.textContent = users.about;
+    avaterImg.src = users.avatar;
   })
   .catch(console.error);
 
