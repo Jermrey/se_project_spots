@@ -2,6 +2,7 @@ import {
   enableValidation,
   settings,
   disableButton,
+  resetValidation,
 } from "../scripts/validate.js";
 import "./index.css";
 import Api from "../utils/Api.js";
