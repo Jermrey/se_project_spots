@@ -237,7 +237,7 @@ function handleDeleteBtn(cardElement, cardId) {
 
 function handleDeleteSubmit(evt) {
   const deleteSubmitBtn = evt.submitter;
-  setButtonText(deleteSubmitBtn, true);
+  setButtonText(deleteSubmitBtn, true, "Deleting...");
 
   evt.preventDefault();
   api
